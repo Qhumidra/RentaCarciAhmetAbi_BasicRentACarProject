@@ -72,7 +72,6 @@ namespace RentaCarciAhmetAbi_Vol._2
             this.label11 = new System.Windows.Forms.Label();
             this.rentPriceLabel = new System.Windows.Forms.Label();
             this.paymentTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.labellll = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.carRentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerRentDataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -220,7 +219,6 @@ namespace RentaCarciAhmetAbi_Vol._2
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.labellll);
             this.groupBox1.Controls.Add(this.dailyButton);
             this.groupBox1.Controls.Add(this.rentPriceButton);
             this.groupBox1.Controls.Add(this.label14);
@@ -513,16 +511,6 @@ namespace RentaCarciAhmetAbi_Vol._2
             this.paymentTypeComboBox.Size = new System.Drawing.Size(137, 29);
             this.paymentTypeComboBox.TabIndex = 28;
             // 
-            // labellll
-            // 
-            this.labellll.AutoSize = true;
-            this.labellll.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labellll.Location = new System.Drawing.Point(457, 316);
-            this.labellll.Name = "labellll";
-            this.labellll.Size = new System.Drawing.Size(34, 21);
-            this.labellll.TabIndex = 29;
-            this.labellll.Text = "00";
-            // 
             // Rent_A_Car
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,6 +587,5 @@ namespace RentaCarciAhmetAbi_Vol._2
         private System.Windows.Forms.MaskedTextBox gDateTimeMTxt;
         private System.Windows.Forms.Button rentPriceButton;
         private System.Windows.Forms.Button dailyButton;
-        private System.Windows.Forms.Label labellll;
     }
 }
