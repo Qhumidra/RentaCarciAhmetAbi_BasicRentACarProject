@@ -905,6 +905,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             // allRentedCarsImgPanel
             // 
             this.allRentedCarsImgPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.allRentedCarsImgPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("allRentedCarsImgPanel.BackgroundImage")));
             this.allRentedCarsImgPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.allRentedCarsImgPanel.Location = new System.Drawing.Point(23, 455);
             this.allRentedCarsImgPanel.Name = "allRentedCarsImgPanel";
@@ -930,6 +931,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             // takingBackImgPanel
             // 
             this.takingBackImgPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.takingBackImgPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("takingBackImgPanel.BackgroundImage")));
             this.takingBackImgPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.takingBackImgPanel.Location = new System.Drawing.Point(22, 384);
             this.takingBackImgPanel.Name = "takingBackImgPanel";

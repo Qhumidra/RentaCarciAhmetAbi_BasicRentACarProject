@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace RentaCarciAhmetAbi_Vol._2
 {
+    //Sql Server Items
     class Server
     {
         public SqlConnection con = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; Initial Catalog = RentACar; Integrated Security = True");
@@ -20,6 +21,7 @@ namespace RentaCarciAhmetAbi_Vol._2
         public void Open() { con.Open(); }
         public void Close() { con.Close(); }
     }
+    //Login Class
     class Login
     {
         Server server;
@@ -40,7 +42,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             server.Close();
         }
     }
-   
+   //Write employee in Rent.form
     class User
     {
         RentACar rent;
@@ -70,7 +72,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             rent.EmployeeId = UserIdLabel;
         }
     }
-
+    //Rent Queries Class
     class RentACar
     {
 
@@ -117,6 +119,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             server.Close();
         }
     }
+    //Customer Queries Class
     class Customer
     {
         Server server;
@@ -162,6 +165,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             server.Close();
         }
     }
+    //Car Queries Class
     class Cars
     {
         Server server;
@@ -205,6 +209,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             server.Close();
         }
     }
+    //Rented Queries Class
     class RentedCars
     {
         Server server;
@@ -226,7 +231,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             server.Close();
         }
     }
-
+    //Taking Back Queries Class
     class RentTakingBack
     {
         Server server;
@@ -249,6 +254,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             server.Close();
         }
     }
+    //All rented cars Queries Class
     class AllRentedCars
     {
         Server server;

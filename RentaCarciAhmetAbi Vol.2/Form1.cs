@@ -16,14 +16,16 @@ namespace RentaCarciAhmetAbi_Vol._2
         {
             InitializeComponent();
         }
-        void Clean()
-        {
-            userName_txtbox.Text = "";
-            password_txtbox.Text = "";
-        }
         Rent rent = new Rent();
         Login login = new Login();
         private void login_button_Click(object sender, EventArgs e)
+        {
+            login_buttonFunction();
+        }
+
+
+
+        void login_buttonFunction()
         {
             try
             {
@@ -49,6 +51,11 @@ namespace RentaCarciAhmetAbi_Vol._2
                 MessageBox.Show("Kullanici adi veya sifre hatali", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Clean();
             }
+        }
+        void Clean()
+        {
+            userName_txtbox.Text = "";
+            password_txtbox.Text = "";
         }
     }
 }

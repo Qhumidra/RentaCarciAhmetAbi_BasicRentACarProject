@@ -18,7 +18,7 @@ namespace RentaCarciAhmetAbi_Vol._2
         }
         Rent_A_Car rent;
         User user;
-        public string User { get; set; }
+        public string User { get; set; }//For write user.
         public int Password { get; set; }
         private void Rent_Load(object sender, EventArgs e)
         {
@@ -153,7 +153,7 @@ namespace RentaCarciAhmetAbi_Vol._2
 
 
 
-
+        //Form Method
         void RentFormFunction()
         {
             rent = new Rent_A_Car();
@@ -175,6 +175,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             TodayTakingBackPanel.Visible = false;
             allRentedCarsPanel.Visible = false;
         }
+        //Main Menu Method
         void mainmenuImgPanelFunction()
         {
             customerPanel.Visible = false;
@@ -183,13 +184,13 @@ namespace RentaCarciAhmetAbi_Vol._2
             allRentedCarsPanel.Visible = false;
             TodayTakingBackPanel.Visible = false;
         }
+        //RentaCar Button Method
         void RentaCarFunction()
         {
             mainmenuImgPanelFunction();
             rent = new Rent_A_Car();
             rent.ShowDialog();
         }
-
         //CustomersMethods
         void AddCustomerButtonFunction()
         {
@@ -277,7 +278,6 @@ namespace RentaCarciAhmetAbi_Vol._2
             }
         }
         //CarsMethods
-
         void AddCarButtonFunction()
         {
             car = new Cars();
@@ -424,10 +424,12 @@ namespace RentaCarciAhmetAbi_Vol._2
             allRentedCars = new AllRentedCars();
             allRentedCarsDataGrid.DataSource = allRentedCars.Write();
         }
+        //Close Rent form Method
         void ExitButtonFunction()
         {
             this.Dispose();
         }
+        //Minimize Rent form Method
         void minimizeButtonFunction()
         {
             this.WindowState = FormWindowState.Minimized;

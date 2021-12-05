@@ -16,23 +16,19 @@ namespace RentaCarciAhmetAbi_Vol._2
         {
             InitializeComponent();
         }
+        //Form Event
         RentACar rentACar;
         AllRentedCars allRented;
         private void Rent_A_Car_Load(object sender, EventArgs e)
         {
-            rentACar = new RentACar();
-            allRented = new AllRentedCars();
-            rentedDataGrid.DataSource = allRented.Write();
-            rentIdTxt.Text = rentedDataGrid.Rows.Count.ToString();
-            customerRentDataGrid.DataSource = rentACar.CustomersRentWrite();
-            carRentDataGrid.DataSource = rentACar.CarsRentWrite();
-            timer1.Start();
+            Rent_A_Car_LoadFunction();
         }
+        //Timer Event
         private void timer1_Tick(object sender, EventArgs e)
         {
-            dateLabel.Text = DateTime.Now.ToShortDateString();
-            timeLabel.Text = DateTime.Now.ToLongTimeString();
+            timer1_TickFunction();
         }
+        //Rent Button Event
         private void RentButton_Click(object sender, EventArgs e)
         {
             RentButtonFunction();
@@ -57,12 +53,28 @@ namespace RentaCarciAhmetAbi_Vol._2
         {
             customerDoubleClickFunction();
         }
-        
-        
 
 
 
 
+        //Load Method
+        void Rent_A_Car_LoadFunction()
+        {
+            rentACar = new RentACar();
+            allRented = new AllRentedCars();
+            rentedDataGrid.DataSource = allRented.Write();
+            rentIdTxt.Text = rentedDataGrid.Rows.Count.ToString();
+            customerRentDataGrid.DataSource = rentACar.CustomersRentWrite();
+            carRentDataGrid.DataSource = rentACar.CarsRentWrite();
+            timer1.Start();
+        }
+        //Timer Method
+        void timer1_TickFunction()
+        {
+            dateLabel.Text = DateTime.Now.ToShortDateString();
+            timeLabel.Text = DateTime.Now.ToLongTimeString();
+        }
+        //Rent Button Method
         void RentButtonFunction()
         {
             try
@@ -70,7 +82,7 @@ namespace RentaCarciAhmetAbi_Vol._2
                 rentACar = new RentACar();
                 rentACar.RentedId = int.Parse(rentIdTxt.Text);
                 rentACar.CarId = int.Parse(carIdLabel.Text);
-                rentACar.EmployeeId = 2;
+                rentACar.EmployeeId = 2; //I Can't solve this problem. 
                 rentACar.CustomerId = int.Parse(customerIdLabel.Text);
                 rentACar.GDate = gDateTimeMTxt.Text;
                 rentACar.TDate = tDateTimeMTxt.Text;
@@ -84,6 +96,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             }
             catch (NullReferenceException) { MessageBox.Show("Bos gecme... Kardesim Kac Kere Diyecez ya...", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.None); }
         }
+        //Show Price Method
         void rentPriceButtonFunction()
         {
             try
@@ -112,6 +125,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             catch (FormatException){ MessageBox.Show("Bos gecme...", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.None);}
             catch (NullReferenceException) { MessageBox.Show("Bos gecme... Kardesim Kac Kere Diyecez ya...", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.None); }
         }    
+        //Search Method
         void rentSearchButtonFunction()
         {
             try 
@@ -126,6 +140,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             }
             catch (NullReferenceException) { }
         }
+        //Rent Selection Methods
         void carDoubleClickFunction()
         {
             try
@@ -155,6 +170,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             {
             }
         }
+        //Today write button Method
         void dailyButtonFunction()
         {
             if (int.Parse(DateTime.Now.Day.ToString()) > 10)
