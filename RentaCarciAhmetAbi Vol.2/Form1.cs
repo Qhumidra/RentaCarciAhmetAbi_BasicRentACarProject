@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentaCarciAhmetAbi_Vol._2.RentaCarciAhmetAbi_Vol._2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +34,7 @@ namespace RentaCarciAhmetAbi_Vol._2
                 rent.Password = int.Parse(password_txtbox.Text);
                 login.User = userName_txtbox.Text;
                 login.Password = int.Parse(password_txtbox.Text);
-                login.UserLogin();
+     
                 bool trueorfalse = login.TrueorFalse;
                 if (trueorfalse == true)
                 {

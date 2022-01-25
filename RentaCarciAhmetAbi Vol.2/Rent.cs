@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentaCarciAhmetAbi_Vol._2.RentaCarciAhmetAbi_Vol._2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -147,7 +148,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             minimizeButtonFunction();
         }
 
-        
+
 
 
 
@@ -313,10 +314,10 @@ namespace RentaCarciAhmetAbi_Vol._2
                 car.Key = key;
                 car.Delete();
                 carGridView.DataSource = car.Write();
-                CleanCarsTextFunction(); 
+                CleanCarsTextFunction();
             }
             catch (ArgumentOutOfRangeException)
-            { 
+            {
                 MessageBox.Show("Yazi alanlari doluyken silme islemi gerceklestirilemez.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.None);
                 CleanCarsTextFunction();
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentaCarciAhmetAbi_Vol._2.RentaCarciAhmetAbi_Vol._2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,10 +57,11 @@ namespace RentaCarciAhmetAbi_Vol._2
 
 
 
-
+        public string Label { get; set; }
         //Load Method
         void Rent_A_Car_LoadFunction()
         {
+            label12.Text = Label;
             rentACar = new RentACar();
             allRented = new AllRentedCars();
             rentedDataGrid.DataSource = allRented.Write();
@@ -91,7 +93,7 @@ namespace RentaCarciAhmetAbi_Vol._2
                 else
                     rentACar.PaymentType = paymentTypeComboBox.SelectedItem.ToString();
                 rentACar.RentPrice = int.Parse(rentPriceLabel.Text);
-                rentACar.Add();
+
                 this.Hide();
             }
             catch (NullReferenceException) { MessageBox.Show("Bos gecme... Kardesim Kac Kere Diyecez ya...", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.None); }

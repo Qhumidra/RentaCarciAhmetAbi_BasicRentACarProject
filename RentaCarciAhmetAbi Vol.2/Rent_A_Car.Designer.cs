@@ -72,6 +72,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             this.label11 = new System.Windows.Forms.Label();
             this.rentPriceLabel = new System.Windows.Forms.Label();
             this.paymentTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.carRentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerRentDataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -219,6 +220,7 @@ namespace RentaCarciAhmetAbi_Vol._2
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.dailyButton);
             this.groupBox1.Controls.Add(this.rentPriceButton);
             this.groupBox1.Controls.Add(this.label14);
@@ -511,6 +513,16 @@ namespace RentaCarciAhmetAbi_Vol._2
             this.paymentTypeComboBox.Size = new System.Drawing.Size(137, 29);
             this.paymentTypeComboBox.TabIndex = 28;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(446, 343);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 24);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "00";
+            // 
             // Rent_A_Car
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,5 +599,6 @@ namespace RentaCarciAhmetAbi_Vol._2
         private System.Windows.Forms.MaskedTextBox gDateTimeMTxt;
         private System.Windows.Forms.Button rentPriceButton;
         private System.Windows.Forms.Button dailyButton;
+        private System.Windows.Forms.Label label12;
     }
 }
